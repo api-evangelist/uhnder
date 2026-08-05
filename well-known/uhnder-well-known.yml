@@ -1,0 +1,57 @@
+generated: '2026-08-05'
+method: probed
+source: live GET of the RFC 8615 /.well-known/ surface on the Uhnder web host
+host: https://www.uhnder.com
+note: Every /.well-known/ path probed returned the site's HTML 404 handler. Uhnder
+  publishes no discovery documents. Recorded so the miss is evidenced rather than
+  re-probed. No WellKnown pointer is wired in apis.yml because no document exists.
+documents: []
+probed:
+- path: /.well-known/security.txt
+  status: 404
+  content_type: text/html
+- path: /.well-known/openid-configuration
+  status: 404
+  content_type: text/html
+- path: /.well-known/oauth-authorization-server
+  status: 404
+  content_type: text/html
+- path: /.well-known/api-catalog
+  status: 404
+  content_type: text/html
+- path: /.well-known/ai-plugin.json
+  status: 404
+  content_type: text/html
+- path: /.well-known/agent-card.json
+  status: 404
+  content_type: text/html
+- path: /.well-known/agent.json
+  status: 404
+  content_type: text/html
+- path: /robots.txt
+  status: 404
+  content_type: text/html
+- path: /llms.txt
+  status: 404
+  content_type: text/html
+- path: /sitemap.xml
+  status: 404
+  content_type: text/html
+- path: /openapi.json
+  status: 404
+  content_type: text/html
+subdomains_probed:
+  note: All candidate developer/API hosts resolve NXDOMAIN — there is no API or docs
+    host to probe a second time.
+  nxdomain:
+  - developer.uhnder.com
+  - docs.uhnder.com
+  - api.uhnder.com
+  - support.uhnder.com
+  - portal.uhnder.com
+  - my.uhnder.com
+  - trust.uhnder.com
+  - status.uhnder.com
+  - sdk.uhnder.com
+  - customer.uhnder.com
+  - partners.uhnder.com

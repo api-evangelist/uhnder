@@ -1,7 +1,16 @@
 aid: uhnder
 name: Uhnder
-description: 'Uhnder is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Uhnder is an Austin, Texas fabless semiconductor company founded in 2015
+  that designs the S80 and S81 77 GHz 4D digital imaging Radar-on-Chip (RoC) for automotive
+  ADAS and automated mobility. Its Digital Code Modulation (DCM) approach on a 28nm
+  RF CMOS process replaces analog FMCW radar with a software-defined sensor, and each
+  RoC ships with an ASPICE-qualified Software Development Kit carrying ready-to-integrate
+  software APIs, on-chip user algorithm support and system tools for Tier-1 and OEM
+  radar stacks. Uhnder is a chip supplier rather than a web-API provider: the SDK and
+  its APIs are embedded interfaces delivered under a commercial customer relationship,
+  and the company publishes no public developer portal, documentation host or machine-readable
+  API contract.'
+image: https://www.uhnder.com/images/data/Uhnder_Logo.svg
 url: https://raw.githubusercontent.com/api-evangelist/uhnder/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +21,14 @@ created: '2026-08-05'
 modified: '2026-08-05'
 tags:
 - Company
+- Semiconductors
+- Automotive
+- Radar
+- ADAS
+- Sensors
+- Embedded
+- Autonomous Vehicles
+- Hardware
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +37,51 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://www.uhnder.com/
+- type: Products
+  url: https://www.uhnder.com/products/
+- type: Compliance
+  url: https://www.uhnder.com/quality
+- type: PrivacyPolicy
+  url: https://www.uhnder.com/site/privacy-notice
+- type: TermsOfService
+  url: https://www.uhnder.com/site/terms-and-conditions
+- type: Support
+  url: mailto:info@uhnder.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/uhnder
+- type: Investors
   url: https://forgeglobal.com/uhnder_stock/
+- type: Conformance
+  url: conformance/uhnder-conformance.yml
+- type: LLMsTxt
+  url: llms/uhnder-llms.txt
+- type: DomainSecurity
+  url: security/uhnder-domain-security.yml
+x-enrichment:
+  date: '2026-08-05'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: Uhnder's S80/S81 product briefs advertise an "ASPICE Qualified SDK with Ready-to-Integrate
+    APIs", but the SDK is only obtainable through a commercial automotive customer
+    relationship — the products page offers no download, registration or documentation
+    link, only info@uhnder.com, and every candidate developer host (developer./docs./api./portal./sdk.uhnder.com)
+    is NXDOMAIN.
+  evidence:
+  - url: https://www.uhnder.com/products/
+    status: 200
+  - url: https://www.uhnder.com/images/data/S81_PTB_v1.0_(1)_.pdf
+    status: 200
+  - url: https://www.uhnder.com/openapi.json
+    status: 404
+  - url: https://www.uhnder.com/llms.txt
+    status: 404
+  - url: https://www.uhnder.com/.well-known/agent-card.json
+    status: 404
+  - url: https://api.github.com/orgs/uhnder
+    status: 200
+  checked: '2026-08-05'

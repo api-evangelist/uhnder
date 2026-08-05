@@ -1,0 +1,75 @@
+generated: '2026-08-05'
+method: searched
+source: https://www.uhnder.com/quality
+note: Uhnder is a semiconductor supplier, not a web-API provider. Its published conformance
+  posture is automotive quality and functional-safety certification for the silicon
+  and its accompanying SDK — not web/API standards. The API-standard rows below are
+  recorded as not-applicable/false because Uhnder publishes no public HTTP API, no
+  machine-readable contract, and no developer portal.
+standards:
+- id: iso-9001-2015
+  name: ISO 9001:2015 Quality Management Systems
+  conforms: true
+  evidence: 'Quality page states "ISO 9001:2015 compliant as certified by DEKRA"; certificate
+    PDF published (reissued 2024-12-27)'
+  certificate: https://www.uhnder.com/images/data/Uhnder,_Inc._9001_Cert_Reissued_Dec_27_2024_.pdf
+  certificate_status: 200
+  certifier: DEKRA
+- id: iso-26262
+  name: ISO 26262 Road Vehicles — Functional Safety
+  conforms: true
+  evidence: Quality page claims functional safety certification for the S80E102 part
+    as defined by ISO 26262
+  source: https://www.uhnder.com/quality
+- id: ul-certification
+  name: UL certification
+  conforms: true
+  evidence: UL certificate image published on the Quality page; no standard number
+    or issue date stated by Uhnder
+  certificate: https://www.uhnder.com/images/data/UL_Cert_.jpg
+  certificate_status: 200
+- id: automotive-spice
+  name: Automotive SPICE (ASPICE) — software process assessment
+  conforms: true
+  evidence: 'S80 and S81 Product Technical Briefs both list "ASPICE Qualified Software
+    Development Kit (SDK) with Ready-to-Integrate APIs" as a product feature'
+  source: https://www.uhnder.com/images/data/S81_PTB_v1.0_(1)_.pdf
+  scope: the SDK shipped with the Radar-on-Chip, not a web API
+- id: openapi
+  conforms: false
+  evidence: No OpenAPI/Swagger document found on any Uhnder host; /openapi.json and
+    every developer subdomain miss (see well-known/uhnder-well-known.yml)
+- id: oauth2
+  conforms: false
+  evidence: No OAuth surface; /.well-known/oauth-authorization-server 404
+- id: oidc
+  conforms: false
+  evidence: /.well-known/openid-configuration 404
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No public HTTP API to carry problem+json responses
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt 404
+- id: asyncapi
+  conforms: false
+  evidence: No event, streaming or webhook surface published
+compliance_program:
+  published: true
+  url: https://www.uhnder.com/quality
+  certifications:
+  - ISO 9001:2015
+  - ISO 26262
+  - UL
+  - Automotive SPICE (ASPICE)
+x-evidence:
+- url: https://www.uhnder.com/quality
+  status: 200
+- url: https://www.uhnder.com/images/data/Uhnder,_Inc._9001_Cert_Reissued_Dec_27_2024_.pdf
+  status: 200
+- url: https://www.uhnder.com/images/data/UL_Cert_.jpg
+  status: 200
+- url: https://www.uhnder.com/images/data/S81_PTB_v1.0_(1)_.pdf
+  status: 200
+- url: https://www.uhnder.com/images/data/S80_PTB_v2.0_1_.pdf
+  status: 200
