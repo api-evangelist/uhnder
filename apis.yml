@@ -10,6 +10,17 @@ description: 'Uhnder is an Austin, Texas fabless semiconductor company founded i
   its APIs are embedded interfaces delivered under a commercial customer relationship,
   and the company publishes no public developer portal, documentation host or machine-readable
   API contract.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.uhnder.com/images/data/Uhnder_Logo.svg
 url: https://raw.githubusercontent.com/api-evangelist/uhnder/refs/heads/main/apis.yml
 x-type: company
